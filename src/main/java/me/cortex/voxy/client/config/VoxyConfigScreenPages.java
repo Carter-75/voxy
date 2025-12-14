@@ -19,7 +19,11 @@ import java.util.List;
 public abstract class VoxyConfigScreenPages {
     private VoxyConfigScreenPages(){}
 
-    public static OptionPage voxyOptionPage = null;
+    public static OptionPage voxyOptionPage;
+
+    static {
+        voxyOptionPage = page();
+    }
 
     public static OptionPage page() {
         List<OptionGroup> groups = new ArrayList<>();
