@@ -1,7 +1,6 @@
 package me.cortex.voxy.client.mixin.sodium;
 
 import me.cortex.voxy.client.config.VoxyConfigScreenPages;
-import me.cortex.voxy.commonImpl.VoxyCommon;
 import net.caffeinemc.mods.sodium.client.gui.SodiumOptionsGUI;
 import net.caffeinemc.mods.sodium.client.gui.options.OptionPage;
 import net.minecraft.client.gui.screens.Screen;
@@ -20,8 +19,6 @@ public class MixinSodiumOptionsGUI {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void voxy$addConfigPage(Screen prevScreen, CallbackInfo ci) {
-        if (VoxyCommon.isAvailable()) {
-            this.pages.add(VoxyConfigScreenPages.voxyOptionPage = VoxyConfigScreenPages.page());
-        }
+        this.pages.add(VoxyConfigScreenPages.voxyOptionPage = VoxyConfigScreenPages.page());
     }
 }

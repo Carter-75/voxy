@@ -35,6 +35,7 @@
     "sodium.MixinRenderSectionManager",
     "sodium.MixinSodiumOptionsGUI",
     "sodium.MixinSodiumWorldRenderer",
+    "compat.lsdc.MixinLSDCGameOptionPages",
     "minecraft.MixinLayerLightSectionStorage"
   ],
   "injectors": {
